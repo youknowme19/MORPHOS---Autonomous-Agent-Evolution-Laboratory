@@ -1,0 +1,16 @@
+[
+  {
+    "id": "cfo_spike_01",
+    "name": "Cross-Border Transaction Anomaly",
+    "must_include": "98000",
+    "ground_truth_evidence": "variance_ratio=81.7x",
+    "evaluation_method": "numeric_match"
+  },
+  {
+    "id": "cfo_tax_02",
+    "name": "Multi-Currency Tax Rate Reconciliation",
+    "must_include": "tax",
+    "ground_truth_evidence": "vat_variance",
+    "evaluation_method": "reconciliation_match"
+  }
+]
