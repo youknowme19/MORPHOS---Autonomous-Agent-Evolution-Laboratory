@@ -21,3 +21,6 @@ htmlcov/
 ._*
 */._*
 **/.DS_Store
+.vercel/
+apps/web/.vercel/
+apps/web/.env*
