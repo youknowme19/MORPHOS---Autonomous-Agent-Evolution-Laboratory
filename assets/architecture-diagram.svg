@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-diag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090E" />
+      <stop offset="50%" stop-color="#0F121C" />
+      <stop offset="100%" stop-color="#07090E" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141926" />
+      <stop offset="100%" stop-color="#0E121B" />
+    </linearGradient>
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#0080FF" />
+    </linearGradient>
+    <linearGradient id="accent-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFA3" />
+      <stop offset="100%" stop-color="#00D084" />
+    </linearGradient>
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B347FF" />
+      <stop offset="100%" stop-color="#7000FF" />
+    </linearGradient>
+    <linearGradient id="accent-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9900" />
+      <stop offset="100%" stop-color="#FF5500" />
+    </linearGradient>
+    <linearGradient id="accent-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FFAA00" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="diag-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Markers -->
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#00F0FF" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#00FFA3" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#B347FF" />
+    </marker>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="680" fill="url(#bg-diag)" rx="14" />
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.15" stroke="#334155" stroke-width="0.5">
+    <line x1="0" y1="110" x2="1200" y2="110" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="390" y1="0" x2="390" y2="680" />
+    <line x1="810" y1="0" x2="810" y2="680" />
+  </g>
+
+  <!-- Title Header -->
+  <text x="600" y="38" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="2">
+    MORPHOS ARCHITECTURE &amp; AUTONOMOUS EVOLUTION LOOP
+  </text>
+  <text x="600" y="58" text-anchor="middle" font-family="sans-serif" font-size="11.5" fill="#64748B" letter-spacing="1">
+    END-TO-END SPECIMEN SYNTHESIS, EXECUTION ISOLATION, DIAGNOSTICS &amp; GOVERNANCE PIPELINE
+  </text>
+
+  <!-- ================= SECTION 1: INGESTION & CAPABILITY LAYER ================= -->
+  <g transform="translate(30, 75)">
+    <rect width="1140" height="65" rx="8" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" />
+    
+    <!-- Step Badge -->
+    <rect x="15" y="14" width="75" height="20" rx="4" fill="#00F0FF" fill-opacity="0.15" stroke="#00F0FF" stroke-width="0.8" />
+    <text x="52" y="28" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="700" fill="#00F0FF">PHASE 01</text>
+    <text x="100" y="29" font-family="sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">GOAL INGESTION &amp; CAPABILITY DISCOVERY</text>
+
+    <!-- Pipeline Components -->
+    <g transform="translate(15, 38)">
+      <text x="0" y="14" font-family="monospace" font-size="11" fill="#94A3B8">Input: &quot;Audit repository / analyze financial anomaly&quot;</text>
+      <text x="390" y="14" font-family="sans-serif" font-size="11" fill="#00FFA3">➔ Task Analyzer (analyzer.py)</text>
+      <text x="600" y="14" font-family="monospace" font-size="11" fill="#94A3B8">Infers Capabilities &amp; Tool Permissions</text>
+      <text x="890" y="14" font-family="sans-serif" font-size="11" fill="#FF9900">Mode: Benchmark / Live</text>
+    </g>
+  </g>
+
+  <!-- Connective Arrows -->
+  <path d="M 210 140 L 210 170" fill="none" stroke="#00F0FF" stroke-width="1.5" marker-end="url(#arrow-cyan)" />
+  <path d="M 600 140 L 600 170" fill="none" stroke="#00FFA3" stroke-width="1.5" marker-end="url(#arrow-green)" />
+  <path d="M 990 140 L 990 170" fill="none" stroke="#B347FF" stroke-width="1.5" marker-end="url(#arrow-purple)" />
+
+  <!-- ================= SECTION 2: COLUMN A - ARCHITECTURE & GENOME ================= -->
+  <g transform="translate(30, 175)">
+    <rect width="360" height="240" rx="8" fill="url(#card-grad)" stroke="#00F0FF" stroke-opacity="0.4" stroke-width="1.2" />
+    <rect x="15" y="12" width="75" height="18" rx="4" fill="#00F0FF" fill-opacity="0.15" />
+    <text x="52" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#00F0FF">PHASE 02</text>
+    <text x="100" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">ARCHITECT &amp; GENOME ENGINE</text>
+
+    <!-- Sub-boxes -->
+    <g transform="translate(15, 42)">
+      <rect width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="18" font-family="sans-serif" font-size="11" font-weight="600" fill="#38BDF8">Typed Genome Specification</text>
+      <text x="10" y="32" font-family="monospace" font-size="9.5" fill="#94A3B8">roles: [planner, researcher, validator, finalizer]</text>
+
+      <rect y="50" width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="68" font-family="sans-serif" font-size="11" font-weight="600" fill="#38BDF8">Orchestrations &amp; Budgets</text>
+      <text x="10" y="82" font-family="monospace" font-size="9.5" fill="#94A3B8">single | planner_executor | router_specialists</text>
+
+      <rect y="98" width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#38BDF8">Population Seeding (Gen 0)</text>
+      <text x="10" y="130" font-family="monospace" font-size="9.5" fill="#94A3B8">Specimens S00-01 .. S00-04 (Diversity preserved)</text>
+
+      <rect y="146" width="330" height="38" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="164" font-family="sans-serif" font-size="11" font-weight="600" fill="#38BDF8">Injected Applied Memory</text>
+      <text x="10" y="176" font-family="monospace" font-size="9.5" fill="#94A3B8">Prepend prior rules into prompt traits</text>
+    </g>
+  </g>
+
+  <!-- Connective arrow A -> B -->
+  <path d="M 390 295 L 415 295" fill="none" stroke="#00F0FF" stroke-width="1.5" marker-end="url(#arrow-cyan)" />
+
+  <!-- ================= SECTION 3: COLUMN B - EXECUTION & SANDBOX ================= -->
+  <g transform="translate(420, 175)">
+    <rect width="360" height="240" rx="8" fill="url(#card-grad)" stroke="#00FFA3" stroke-opacity="0.4" stroke-width="1.2" />
+    <rect x="15" y="12" width="75" height="18" rx="4" fill="#00FFA3" fill-opacity="0.15" />
+    <text x="52" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#00FFA3">PHASE 03</text>
+    <text x="100" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">SANDBOXED EXECUTION &amp; TOOLS</text>
+
+    <!-- Sub-boxes -->
+    <g transform="translate(15, 42)">
+      <rect width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="18" font-family="sans-serif" font-size="11" font-weight="600" fill="#34D399">Python AST Sandbox Isolation</text>
+      <text x="10" y="32" font-family="monospace" font-size="9.5" fill="#94A3B8">Blocks os, sys, subprocess, eval, file write</text>
+
+      <rect y="50" width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="68" font-family="sans-serif" font-size="11" font-weight="600" fill="#34D399">Path Traversal &amp; Secret Guards</text>
+      <text x="10" y="82" font-family="monospace" font-size="9.5" fill="#94A3B8">Blocks ../, .env, id_rsa | Redacts sk-, ghp_</text>
+
+      <rect y="98" width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#34D399">Multi-Language GitHub Analysis</text>
+      <text x="10" y="130" font-family="monospace" font-size="9.5" fill="#94A3B8">Python, JS/TS, C/C++ entry points &amp; PR review</text>
+
+      <rect y="146" width="330" height="38" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="164" font-family="sans-serif" font-size="11" font-weight="600" fill="#34D399">Inference Plane</text>
+      <text x="10" y="176" font-family="monospace" font-size="9.5" fill="#94A3B8">TensorMux (glm-4-7-flash) | FallbackLocalPolicy</text>
+    </g>
+  </g>
+
+  <!-- Connective arrow B -> C -->
+  <path d="M 780 295 L 805 295" fill="none" stroke="#00FFA3" stroke-width="1.5" marker-end="url(#arrow-green)" />
+
+  <!-- ================= SECTION 4: COLUMN C - EVALUATION & MUTATION ================= -->
+  <g transform="translate(810, 175)">
+    <rect width="360" height="240" rx="8" fill="url(#card-grad)" stroke="#B347FF" stroke-opacity="0.4" stroke-width="1.2" />
+    <rect x="15" y="12" width="75" height="18" rx="4" fill="#B347FF" fill-opacity="0.15" />
+    <text x="52" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#B347FF">PHASE 04</text>
+    <text x="100" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">EVALUATOR &amp; MUTATION ENGINE</text>
+
+    <!-- Sub-boxes -->
+    <g transform="translate(15, 42)">
+      <rect width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="18" font-family="sans-serif" font-size="11" font-weight="600" fill="#C084FC">Multi-Objective Fitness Function</text>
+      <text x="10" y="32" font-family="monospace" font-size="9.5" fill="#94A3B8">0.40*Acc + 0.30*Rel + 0.15*Speed + 0.15*Cost</text>
+
+      <rect y="50" width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="68" font-family="sans-serif" font-size="11" font-weight="600" fill="#C084FC">Evidence &amp; Grounding Check</text>
+      <text x="10" y="82" font-family="monospace" font-size="9.5" fill="#94A3B8">Validates claims; heavily penalizes false positives</text>
+
+      <rect y="98" width="330" height="42" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#C084FC">Diagnostic Root Cause Attribution</text>
+      <text x="10" y="130" font-family="monospace" font-size="9.5" fill="#94A3B8">poor_exploration | unsupported_claims | tool_thrash</text>
+
+      <rect y="146" width="330" height="38" rx="5" fill="#0B0F19" stroke="#1E293B" stroke-width="1" />
+      <text x="10" y="164" font-family="sans-serif" font-size="11" font-weight="600" fill="#C084FC">Architectural Mutation Operators</text>
+      <text x="10" y="176" font-family="monospace" font-size="9.5" fill="#94A3B8">Add validator | Expand roles | Adapt budget</text>
+    </g>
+  </g>
+
+  <!-- Connective Arrows from C to Bottom -->
+  <path d="M 990 415 L 990 450" fill="none" stroke="#B347FF" stroke-width="1.5" marker-end="url(#arrow-purple)" />
+  <path d="M 600 415 L 600 450" fill="none" stroke="#00FFA3" stroke-width="1.5" marker-end="url(#arrow-green)" />
+  <path d="M 210 415 L 210 450" fill="none" stroke="#00F0FF" stroke-width="1.5" marker-end="url(#arrow-cyan)" />
+
+  <!-- Loopback arrow from Mutation back to Specimen -->
+  <path d="M 1150 415 L 1170 415 L 1170 155 L 210 155" fill="none" stroke="#B347FF" stroke-width="1.2" stroke-dasharray="4,4" />
+  <text x="1150" y="280" font-family="sans-serif" font-size="9" fill="#C084FC" transform="rotate(90, 1150, 280)">NEXT GENERATION LOOP</text>
+
+  <!-- ================= SECTION 5: BOTTOM ROW - PLATFORM, MEMORY & PARETO ================= -->
+  
+  <!-- Bottom Box 1: Epistemic Memory Bank -->
+  <g transform="translate(30, 455)">
+    <rect width="360" height="195" rx="8" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" />
+    <rect x="15" y="12" width="75" height="18" rx="4" fill="#7000FF" fill-opacity="0.2" />
+    <text x="52" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#B347FF">MEMORY</text>
+    <text x="100" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">EPISTEMIC MEMORY BANK</text>
+
+    <g transform="translate(15, 38)">
+      <text x="0" y="16" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Failure Reflection &amp; Rule Extraction</text>
+      <text x="10" y="32" font-family="monospace" font-size="9" fill="#94A3B8">Learns API schemas &amp; benign noise patterns</text>
+      <text x="0" y="54" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Cross-Generation Epistemic Transfer</text>
+      <text x="10" y="70" font-family="monospace" font-size="9" fill="#94A3B8">Passes lessons to Gen 1, 2, 3 children</text>
+      <text x="0" y="92" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Persistent JSON Storage</text>
+      <text x="10" y="108" font-family="monospace" font-size="9" fill="#94A3B8">Rules survive across independent jobs</text>
+      <rect y="120" width="330" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="0.7" />
+      <text x="10" y="138" font-family="monospace" font-size="9" fill="#00FFA3">Applied: 14 domain-scoped lessons indexed</text>
+    </g>
+  </g>
+
+  <!-- Bottom Box 2: Pareto Frontier -->
+  <g transform="translate(420, 455)">
+    <rect width="360" height="195" rx="8" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" />
+    <rect x="15" y="12" width="75" height="18" rx="4" fill="#00FFA3" fill-opacity="0.2" />
+    <text x="52" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#00FFA3">SELECTION</text>
+    <text x="100" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">PARETO MULTI-OBJECTIVE SORT</text>
+
+    <g transform="translate(15, 38)">
+      <text x="0" y="16" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Non-Dominated Frontier Extraction</text>
+      <text x="10" y="32" font-family="monospace" font-size="9" fill="#94A3B8">Filters out strictly dominated specimens</text>
+      <text x="0" y="54" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Diversity Preservation</text>
+      <text x="10" y="70" font-family="monospace" font-size="9" fill="#94A3B8">Retains diverse orchestration topologies</text>
+      <text x="0" y="92" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Cost Outlier Elimination</text>
+      <text x="10" y="108" font-family="monospace" font-size="9" fill="#94A3B8">Prevents ballooning token budgets</text>
+      <rect y="120" width="330" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="0.7" />
+      <text x="10" y="138" font-family="monospace" font-size="9" fill="#FFD700">Crowns optimal trade-off Champion</text>
+    </g>
+  </g>
+
+  <!-- Bottom Box 3: Enterprise Platform & Deployment -->
+  <g transform="translate(810, 455)">
+    <rect width="360" height="195" rx="8" fill="url(#card-grad)" stroke="#FFD700" stroke-opacity="0.4" stroke-width="1.2" />
+    <rect x="15" y="12" width="75" height="18" rx="4" fill="#FFD700" fill-opacity="0.2" />
+    <text x="52" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#FFD700">DEPLOY</text>
+    <text x="100" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">ENTERPRISE REGISTRY &amp; RUNTIME</text>
+
+    <g transform="translate(15, 38)">
+      <text x="0" y="16" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Agent Versioning (v1, v2, v3...)</text>
+      <text x="10" y="32" font-family="monospace" font-size="9" fill="#94A3B8">Production readiness score (0 - 100%)</text>
+      <text x="0" y="54" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Instant Version Rollback</text>
+      <text x="10" y="70" font-family="monospace" font-size="9" fill="#94A3B8">POST /api/agents/{id}/rollback in 1 click</text>
+      <text x="0" y="92" font-family="sans-serif" font-size="11" fill="#E2E8F0">• Standalone Champion Export</text>
+      <text x="10" y="108" font-family="monospace" font-size="9" fill="#94A3B8">Self-contained .py script (Zero daemon)</text>
+      <rect y="120" width="330" height="28" rx="4" fill="#0B0F19" stroke="#334155" stroke-width="0.7" />
+      <text x="10" y="138" font-family="monospace" font-size="9" fill="#38BDF8">Continuous eval &amp; regression alerting</text>
+    </g>
+  </g>
+
+  <!-- Outer Border Frame -->
+  <rect x="1" y="1" width="1198" height="678" rx="13" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.4" />
+</svg>
