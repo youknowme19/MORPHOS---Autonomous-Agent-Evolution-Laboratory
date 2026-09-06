@@ -1,0 +1,16 @@
+[
+  {
+    "id": "res_kv_01",
+    "name": "KV Cache Linear Memory Scaling Claim",
+    "must_include": "kv cache",
+    "ground_truth_evidence": "doc:kv-cache",
+    "evaluation_method": "citation_match"
+  },
+  {
+    "id": "res_routing_02",
+    "name": "Attention Token Eviction Policy Claim",
+    "must_include": "routing",
+    "ground_truth_evidence": "doc:routing",
+    "evaluation_method": "citation_match"
+  }
+]
