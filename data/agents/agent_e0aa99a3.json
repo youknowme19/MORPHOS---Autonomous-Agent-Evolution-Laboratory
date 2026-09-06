@@ -1,0 +1,137 @@
+{
+  "agent_id": "agent_e0aa99a3",
+  "name": "Research Autonomous Agent",
+  "description": "Research a technical topic and produce an evidence-backed summary.",
+  "domain": "research",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S01-03",
+      "generation": 1,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "retrieve",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 5,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "retrieve",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.3333,
+        "reliability": 1.0,
+        "speed": 0.9911,
+        "cost_efficiency": 0.9754,
+        "latency_ms": 126.0,
+        "cost_usd": 0.002457,
+        "fitness": 72.83,
+        "false_positive_rate": 0.0,
+        "coverage": 0.3533,
+        "tool_calls": 4,
+        "tokens": 492
+      },
+      "contract": {
+        "purpose": "Research a technical topic and produce an evidence-backed summary.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "retrieve",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.3333,
+          "reliability": 1.0,
+          "speed": 0.9911,
+          "cost_usd": 0.002457,
+          "fitness": 72.83
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 82.5,
+        "correctness": 33.3,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.5,
+        "latency_score": 99.1,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Document d3 explicitly disproves the naive assumption that more agents always improve accuracy; multi-agent architectures without validators degrade performance."
+      ],
+      "output_sample": "[GENERATION 1 - REFLECTED AGENT OUTPUT]\nGOAL: Research a technical topic and produce an evidence-backed summary.\nVALIDATED FINDINGS:\n[VALIDATED] Reusing KV cache across requests reduces prefill cost. Tensormux-style gateways do not own KV cache; engines do. (Evidence: KV cache reuse...)\n[VALIDATED] Least-inflight routing sends new work to the backend with the fewest in-flight requests, improving tail latency. (Evidence: Routing...)\n[VALIDATED] Some blogs claim that adding more agents always improves accuracy. Controlled studies show the opposite when validators are missing. (Evidence: Red herring...)\n[VALIDATED] Adding agents without a validator can reduce accuracy. (Evidence: d3...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Document d3 explicitly disproves the naive assumption that more agents always improve accuracy; multi-agent architectures without validators degrade performance.",
+      "created_at": "2026-09-06T17:45:17.213783+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_e0aa99a3",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 0.3333,
+    "reliability": 1.0,
+    "speed": 0.9911,
+    "cost_efficiency": 0.9754,
+    "latency_ms": 126.0,
+    "cost_usd": 0.002457,
+    "fitness": 72.83,
+    "false_positive_rate": 0.0,
+    "coverage": 0.3533,
+    "tool_calls": 4,
+    "tokens": 492
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T17:45:17.213783+00:00",
+  "updated_at": "2026-09-06T17:45:17.213816+00:00"
+}

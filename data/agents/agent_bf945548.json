@@ -1,0 +1,147 @@
+{
+  "agent_id": "agent_bf945548",
+  "name": "Github Repo Autonomous Agent",
+  "description": "Inspect unfamiliar GitHub repository https://github.com/youknowme19/Autotune-The-Phase-Ordering-CLI-Doctor, discover architecture tree, entry points, and security sensitive sinks.",
+  "domain": "github_repo",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S03-01",
+      "generation": 3,
+      "genome": {
+        "orchestration": "router_specialists",
+        "tools": [
+          "github_inspect",
+          "grep",
+          "python_eval",
+          "evidence_check"
+        ],
+        "memory": "failure",
+        "validators": [
+          "output",
+          "consistency"
+        ],
+        "search_budget": 5,
+        "prompt_traits": [
+          "exploratory"
+        ],
+        "roles": [
+          "router",
+          "specialist",
+          "critic",
+          "finalizer"
+        ]
+      },
+      "roles": [
+        "router",
+        "specialist",
+        "critic",
+        "finalizer"
+      ],
+      "tools": [
+        "github_inspect",
+        "grep",
+        "python_eval",
+        "evidence_check"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.9375,
+        "reliability": 1.0,
+        "speed": 0.6362,
+        "cost_efficiency": 0.9498,
+        "latency_ms": 5136.5,
+        "cost_usd": 0.005024,
+        "fitness": 91.29,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 9,
+        "tokens": 1324
+      },
+      "contract": {
+        "purpose": "Inspect unfamiliar GitHub repository https://github.com/youknowme19/Autotune-The-Phase-Ordering-CLI-Doctor, discover architecture tree, entry points, and security sensitive sinks.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "github_inspect",
+          "grep",
+          "python_eval",
+          "evidence_check"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.9375,
+          "reliability": 1.0,
+          "speed": 0.6362,
+          "cost_usd": 0.005024,
+          "fitness": 91.29
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 97.4,
+        "correctness": 93.8,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 95.0,
+        "latency_score": 63.6,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (auth.py, config.py, database.py). Validate credentials and sinks via evidence_check to eliminate false positives.",
+        "Repository Autotune-The-Phase-Ordering-CLI-Doctor (C/C++, Python): Main entry point isolated at 'src/autotune/cli.py'. Inspect syntax trees from this root before reading leaf modules.",
+        "Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (.env.example, SECURITY.md, src/autotune/sandbox). Validate credentials and sinks via evidence_check to eliminate false positives."
+      ],
+      "output_sample": "[CHAMPION SPECIMEN - CONTEXT-OPTIMIZED SYNTHESIS]\nOBJECTIVE: Inspect unfamiliar GitHub repository https://github.com/youknowme19/Autotune-The-Phase-Ordering-CLI-Doctor, discover architecture tree, entry points, and security sensitive sinks.\nVERIFIED TARGETS & DISCOVERIES:\n1. [REPO_DISCOVERY] Mapped repository architecture and entry point: src/autotune/cli.py (C/C++).\n   Evidence Grounding: repo=https://github.com/youknowme19/Autotune-The-Phase-Ordering-CLI-Doctor branch=main\n2. [REPO_DISCOVERY] Identified language stack: C/C++, Python.\n   Evidence Grounding: languages=['C/C++', 'Python']\n3. [TEST_COVERAGE] Verified test coverage layout (1 test files detected).\n   Evidence Grounding: tests=['tests']\n4. [SECURITY_RISK] Audited 3/4 security sensitive sink(s): .env.example, SECURITY.md, src/autotune/sandbox.\n   Evidence Grounding: Target: ['.env.example', 'SECURITY.md', 'src/autotune/sandbox']\n\nCROSS-GENERATIONAL CONTEXT APPLIED:\n- Learned: Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (auth.py, config.py, database.py). Validate credentials and sinks via evidence_check to eliminate false positives.\n- Learned: Repository Autotune-The-Phase-Ordering-CLI-Doctor (C/C++, Python): Main entry point isolated at 'src/autotune/cli.py'. Inspect syntax trees from this root before reading leaf modules.\n- Learned: Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (.env.example, SECURITY.md, src/autotune/sandbox). Validate credentials and sinks via evidence_check to eliminate false positives.\n\nEXECUTION QUALITY: Zero false positives. Pruned redundant tool queries. Evidence validated.",
+      "created_at": "2026-09-06T16:49:09.007960+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_bf945548",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 0.9375,
+    "reliability": 1.0,
+    "speed": 0.6362,
+    "cost_efficiency": 0.9498,
+    "latency_ms": 5136.5,
+    "cost_usd": 0.005024,
+    "fitness": 91.29,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 9,
+    "tokens": 1324
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T16:49:09.007960+00:00",
+  "updated_at": "2026-09-06T16:49:09.008301+00:00"
+}
