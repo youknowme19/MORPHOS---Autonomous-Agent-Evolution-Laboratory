@@ -1,0 +1,139 @@
+{
+  "agent_id": "agent_407312c0",
+  "name": "Github Repo Autonomous Agent",
+  "description": "Inspect unfamiliar GitHub repository https://github.com/youknowme19/graph_z3, discover architecture tree, entry points, and security sensitive sinks.",
+  "domain": "github_repo",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S03-01",
+      "generation": 3,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 3,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "github_inspect",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.15,
+        "cost_efficiency": 0.9741,
+        "latency_ms": 4176.7,
+        "cost_usd": 0.002585,
+        "fitness": 86.86,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 2,
+        "tokens": 892
+      },
+      "contract": {
+        "purpose": "Inspect unfamiliar GitHub repository https://github.com/youknowme19/graph_z3, discover architecture tree, entry points, and security sensitive sinks.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.15,
+          "cost_usd": 0.002585,
+          "fitness": 86.86
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.1,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.4,
+        "latency_score": 15.0,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Live API verification: Endpoint returned HTTP 200 with schema keys ['hits', 'nbHits']. Payload confirmed live Internet connection.",
+        "GitHub repository inspection: Extract tree and entry points from default branch before inspecting files. Never guess root file paths.",
+        "Security sinks (auth, config, database) require explicit line citations. Test fixtures under /tests/ must be isolated from production vulnerabilities."
+      ],
+      "output_sample": "[CHAMPION SPECIMEN - CONTEXT-OPTIMIZED SYNTHESIS]\nOBJECTIVE: Inspect unfamiliar GitHub repository https://github.com/youknowme19/graph_z3, discover architecture tree, entry points, and security sensitive sinks.\nVERIFIED TARGETS & DISCOVERIES:\n1. [REPO_DISCOVERY] Mapped repository architecture (Python, entry: main.py).\n   Evidence Grounding: repo=https://github.com/youknowme19/graph_z3 branch=main\n2. [SECURITY_RISK] Inspected sensitive file src/api for authentication & input validation boundaries.\n   Evidence Grounding: Target: src/api\n3. [TEST_COVERAGE] Verified test coverage layout (1 test files detected).\n   Evidence Grounding: tests=['tests']\n\nCROSS-GENERATIONAL CONTEXT APPLIED:\n- Learned: Live API verification: Endpoint returned HTTP 200 with schema keys ['hits', 'nbHits']. Payload confirmed live Internet connection.\n- Learned: GitHub repository inspection: Extract tree and entry points from default branch before inspecting files. Never guess root file paths.\n- Learned: Security sinks (auth, config, database) require explicit line citations. Test fixtures under /tests/ must be isolated from production vulnerabilities.\n\nEXECUTION QUALITY: Zero false positives. Pruned redundant tool queries. Evidence validated.",
+      "created_at": "2026-09-06T11:28:11.285976+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_407312c0",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.15,
+    "cost_efficiency": 0.9741,
+    "latency_ms": 4176.7,
+    "cost_usd": 0.002585,
+    "fitness": 86.86,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 2,
+    "tokens": 892
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T11:28:11.285976+00:00",
+  "updated_at": "2026-09-06T11:28:11.286553+00:00"
+}

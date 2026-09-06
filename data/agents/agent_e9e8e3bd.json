@@ -1,0 +1,144 @@
+{
+  "agent_id": "agent_e9e8e3bd",
+  "name": "Github Repo Autonomous Agent",
+  "description": "Perform a security-focused analysis of a real public GitHub repository https://github.com/encode/httpx. Discover repository structure, entry points, inspect relevant source files, identify potential security issues, and provide evidence.",
+  "domain": "github_repo",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S02-01",
+      "generation": 2,
+      "genome": {
+        "orchestration": "router_specialists",
+        "tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "memory": "failure",
+        "validators": [
+          "none",
+          "consistency"
+        ],
+        "search_budget": 5,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "router",
+          "specialist",
+          "critic",
+          "finalizer"
+        ]
+      },
+      "roles": [
+        "router",
+        "specialist",
+        "critic",
+        "finalizer"
+      ],
+      "tools": [
+        "list_files",
+        "github_inspect",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.875,
+        "reliability": 1.0,
+        "speed": 0.7142,
+        "cost_efficiency": 0.9505,
+        "latency_ms": 4034.7,
+        "cost_usd": 0.004951,
+        "fitness": 89.97,
+        "false_positive_rate": 0.0,
+        "coverage": 0.955,
+        "tool_calls": 4,
+        "tokens": 1096
+      },
+      "contract": {
+        "purpose": "Perform a security-focused analysis of a real public GitHub repository https://github.com/encode/httpx. Discover repository structure, entry points, inspect relevant source files, identify potential security issues, and provide evidence.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.875,
+          "reliability": 1.0,
+          "speed": 0.7142,
+          "cost_usd": 0.004951,
+          "fitness": 89.97
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 95.8,
+        "correctness": 87.5,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 95.0,
+        "latency_score": 71.4,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Repository flask: 6 sensitive sink boundary(ies) identified (.editorconfig, .github/ISSUE_TEMPLATE/config.yml, .pre-commit-config.yaml). Validate credentials and sinks via evidence_check to eliminate false positives.",
+        "Repository httpx (Python): Main entry point isolated at 'httpx/_main.py'. Inspect syntax trees from this root before reading leaf modules.",
+        "Repository httpx: 6 sensitive sink boundary(ies) identified (.github/ISSUE_TEMPLATE/config.yml, docs/advanced/authentication.md, docs/api.md). Validate credentials and sinks via evidence_check to eliminate false positives."
+      ],
+      "output_sample": "[GENERATION 2 - REFLECTED AGENT OUTPUT]\nGOAL: Perform a security-focused analysis of a real public GitHub repository https://github.com/encode/httpx. Discover repository structure, entry points, inspect relevant source files, identify potential security issues, and provide evidence.\nVALIDATED FINDINGS:\n[VALIDATED] Mapped repository architecture and entry point: httpx/_main.py (Python). (Evidence: repo=https://github.com/encode/httpx bra...)\n[VALIDATED] Identified language stack: Python. (Evidence: languages=['Python']...)\n[VALIDATED] Verified test coverage layout (2 test files detected). (Evidence: tests=['.github/workflows/test-suite.yml...)\n[VALIDATED] Audited 3/6 security sensitive sink(s): .github/ISSUE_TEMPLATE/config.yml, docs/advanced/authentication.md, docs/api.md. (Evidence: Target: ['.github/ISSUE_TEMPLATE/config....)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Repository flask: 6 sensitive sink boundary(ies) identified (.editorconfig, .github/ISSUE_TEMPLATE/config.yml, .pre-commit-config.yaml). Validate credentials and sinks via evidence_check to eliminate false positives.\n  -> Repository httpx (Python): Main entry point isolated at 'httpx/_main.py'. Inspect syntax trees from this root before reading leaf modules.",
+      "created_at": "2026-09-06T12:17:17.110755+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_e9e8e3bd",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 0.875,
+    "reliability": 1.0,
+    "speed": 0.7142,
+    "cost_efficiency": 0.9505,
+    "latency_ms": 4034.7,
+    "cost_usd": 0.004951,
+    "fitness": 89.97,
+    "false_positive_rate": 0.0,
+    "coverage": 0.955,
+    "tool_calls": 4,
+    "tokens": 1096
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T12:17:17.110755+00:00",
+  "updated_at": "2026-09-06T12:17:17.110987+00:00"
+}

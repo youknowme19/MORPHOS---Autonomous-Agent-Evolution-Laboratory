@@ -1,0 +1,136 @@
+{
+  "agent_id": "agent_186c8229",
+  "name": "Cybersecurity Autonomous Agent",
+  "description": "Audit an unfamiliar Python repository for security vulnerabilities.",
+  "domain": "cybersecurity",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S02-01",
+      "generation": 2,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 4,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.9914,
+        "cost_efficiency": 0.9755,
+        "latency_ms": 122.0,
+        "cost_usd": 0.002453,
+        "fitness": 99.5,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 6,
+        "tokens": 478
+      },
+      "contract": {
+        "purpose": "Audit an unfamiliar Python repository for security vulnerabilities.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.9914,
+          "cost_usd": 0.002453,
+          "fitness": 99.5
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.2,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.5,
+        "latency_score": 99.1,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (.env.example, SECURITY.md, src/autotune/sandbox). Validate credentials and sinks via evidence_check to eliminate false positives.",
+        "Repository httpx: 1 sensitive sink boundary(ies) identified (config.py). Validate credentials and sinks via evidence_check to eliminate false positives.",
+        "Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (auth.py, config.py, database.py). Validate credentials and sinks via evidence_check to eliminate false positives."
+      ],
+      "output_sample": "[GENERATION 2 - REFLECTED AGENT OUTPUT]\nGOAL: Audit an unfamiliar Python repository for security vulnerabilities.\nVALIDATED FINDINGS:\n[VALIDATED] SQL injection via string-formatted queries in db.py (Evidence: def get_user(conn, user_id):\n    query =...)\n[VALIDATED] Hardcoded AWS key AKIAIOSFODNN7EXAMPLE in config.py (Evidence: AWS_ACCESS_KEY_ID = \"AKIAIOSFODNN7EXAMPL...)\n[VALIDATED] DOM XSS via innerHTML and location.hash in routes.py (Evidence: def render_profile(name):\n    return f\"<...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (.env.example, SECURITY.md, src/autotune/sandbox). Validate credentials and sinks via evidence_check to eliminate false positives.\n  -> Repository httpx: 1 sensitive sink boundary(ies) identified (config.py). Validate credentials and sinks via evidence_check to eliminate false positives.",
+      "created_at": "2026-09-06T13:04:46.611701+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_186c8229",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.9914,
+    "cost_efficiency": 0.9755,
+    "latency_ms": 122.0,
+    "cost_usd": 0.002453,
+    "fitness": 99.5,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 6,
+    "tokens": 478
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T13:04:46.611701+00:00",
+  "updated_at": "2026-09-06T13:04:46.611733+00:00"
+}

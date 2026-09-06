@@ -1,0 +1,127 @@
+{
+  "agent_id": "agent_023339b1",
+  "name": "Research Autonomous Agent",
+  "description": "Analyze the HackerNews API and extract top 10 AI stories",
+  "domain": "research",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S00-01",
+      "generation": 0,
+      "genome": {
+        "orchestration": "single",
+        "tools": [
+          "retrieve"
+        ],
+        "memory": "none",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 1,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "generalist"
+        ]
+      },
+      "roles": [
+        "generalist"
+      ],
+      "tools": [
+        "retrieve"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.0,
+        "reliability": 0.7,
+        "speed": 0.737,
+        "cost_efficiency": 0.9857,
+        "latency_ms": 3712.3,
+        "cost_usd": 0.001426,
+        "fitness": 46.84,
+        "false_positive_rate": 0.0,
+        "coverage": 0.0,
+        "tool_calls": 1,
+        "tokens": 861
+      },
+      "contract": {
+        "purpose": "Analyze the HackerNews API and extract top 10 AI stories",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "retrieve"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.0,
+          "reliability": 0.7,
+          "speed": 0.737,
+          "cost_usd": 0.001426,
+          "fitness": 46.84
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 66.0,
+        "correctness": 0.0,
+        "reliability": 70.0,
+        "evidence_grounding": 95.0,
+        "cost_efficiency": 98.6,
+        "latency_score": 73.7,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [],
+      "output_sample": "[GENERATION 0 - BASELINE EXPLORATION OUTPUT]\nGOAL: Analyze the HackerNews API and extract top 10 AI stories\nINITIAL FINDINGS (Unfiltered):\nASSESSMENT: High exploratory noise. Lacks evidence validation and parameter pruning.",
+      "created_at": "2026-09-06T12:55:18.683379+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_023339b1",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 0.0,
+    "reliability": 0.7,
+    "speed": 0.737,
+    "cost_efficiency": 0.9857,
+    "latency_ms": 3712.3,
+    "cost_usd": 0.001426,
+    "fitness": 46.84,
+    "false_positive_rate": 0.0,
+    "coverage": 0.0,
+    "tool_calls": 1,
+    "tokens": 861
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T12:55:18.683379+00:00",
+  "updated_at": "2026-09-06T12:55:18.683722+00:00"
+}

@@ -1,0 +1,139 @@
+{
+  "agent_id": "agent_a6cb46d3",
+  "name": "Github Repo Autonomous Agent",
+  "description": "Inspect unfamiliar GitHub repository https://github.com/youknowme19/graph_z3, discover architecture tree, entry points, and security sensitive sinks.",
+  "domain": "github_repo",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S02-01",
+      "generation": 2,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 3,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "github_inspect",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.9365,
+        "cost_efficiency": 0.9758,
+        "latency_ms": 896.8,
+        "cost_usd": 0.00242,
+        "fitness": 98.68,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 2,
+        "tokens": 376
+      },
+      "contract": {
+        "purpose": "Inspect unfamiliar GitHub repository https://github.com/youknowme19/graph_z3, discover architecture tree, entry points, and security sensitive sinks.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.9365,
+          "cost_usd": 0.00242,
+          "fitness": 98.68
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.2,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 93.7,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (.env.example, SECURITY.md, src/autotune/sandbox). Validate credentials and sinks via evidence_check to eliminate false positives.",
+        "Repository graph_z3 (Python): Main entry point isolated at 'main.py'. Inspect syntax trees from this root before reading leaf modules.",
+        "Repository graph_z3: 1 sensitive sink boundary(ies) identified (src/api). Validate credentials and sinks via evidence_check to eliminate false positives."
+      ],
+      "output_sample": "[GENERATION 2 - REFLECTED AGENT OUTPUT]\nGOAL: Inspect unfamiliar GitHub repository https://github.com/youknowme19/graph_z3, discover architecture tree, entry points, and security sensitive sinks.\nVALIDATED FINDINGS:\n[VALIDATED] Mapped repository architecture and entry point: main.py (Python). (Evidence: repo=https://github.com/youknowme19/grap...)\n[VALIDATED] Identified language stack: Python. (Evidence: languages=['Python']...)\n[VALIDATED] Verified test coverage layout (1 test files detected). (Evidence: tests=['tests']...)\n[VALIDATED] Audited 1/1 security sensitive sink(s): src/api. (Evidence: Target: ['src/api']...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Repository Autotune-The-Phase-Ordering-CLI-Doctor: 4 sensitive sink boundary(ies) identified (.env.example, SECURITY.md, src/autotune/sandbox). Validate credentials and sinks via evidence_check to eliminate false positives.\n  -> Repository graph_z3 (Python): Main entry point isolated at 'main.py'. Inspect syntax trees from this root before reading leaf modules.",
+      "created_at": "2026-09-06T11:47:15.318680+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_a6cb46d3",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.9365,
+    "cost_efficiency": 0.9758,
+    "latency_ms": 896.8,
+    "cost_usd": 0.00242,
+    "fitness": 98.68,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 2,
+    "tokens": 376
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T11:47:15.318680+00:00",
+  "updated_at": "2026-09-06T11:47:15.318917+00:00"
+}

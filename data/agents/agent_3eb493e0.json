@@ -1,0 +1,137 @@
+{
+  "agent_id": "agent_3eb493e0",
+  "name": "Support Autonomous Agent",
+  "description": "Classify a support ticket and generate the appropriate response.",
+  "domain": "support",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S01-03",
+      "generation": 1,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "classify",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 5,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "classify",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.9917,
+        "cost_efficiency": 0.9756,
+        "latency_ms": 117.0,
+        "cost_usd": 0.002441,
+        "fitness": 99.51,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 4,
+        "tokens": 442
+      },
+      "contract": {
+        "purpose": "Classify a support ticket and generate the appropriate response.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "classify",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.9917,
+          "cost_usd": 0.002441,
+          "fitness": 99.51
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.2,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 99.2,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Double billing complaints must trigger a billing_refund SLA response. 401 errors after rotation require key verification, not refund language."
+      ],
+      "output_sample": "[GENERATION 1 - REFLECTED AGENT OUTPUT]\nGOAL: Classify a support ticket and generate the appropriate response.\nVALIDATED FINDINGS:\n[VALIDATED] T-104:billing_refund (Evidence: I was charged twice for the same invoice...)\n[VALIDATED] T-221:auth_incident (Evidence: The API returns 401 even with a valid ke...)\n[VALIDATED] T-308:how_to (Evidence: How do I export my usage CSV for August?...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Double billing complaints must trigger a billing_refund SLA response. 401 errors after rotation require key verification, not refund language.",
+      "created_at": "2026-09-06T12:26:22.294856+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_3eb493e0",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.9917,
+    "cost_efficiency": 0.9756,
+    "latency_ms": 117.0,
+    "cost_usd": 0.002441,
+    "fitness": 99.51,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 4,
+    "tokens": 442
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T12:26:22.294856+00:00",
+  "updated_at": "2026-09-06T12:26:22.294884+00:00"
+}

@@ -1,0 +1,136 @@
+{
+  "agent_id": "agent_4d3f1308",
+  "name": "Cybersecurity Autonomous Agent",
+  "description": "Audit an unfamiliar Python repository for security vulnerabilities.",
+  "domain": "cybersecurity",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S01-02",
+      "generation": 1,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 4,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.9494,
+        "cost_efficiency": 0.9753,
+        "latency_ms": 143.0,
+        "cost_usd": 0.002466,
+        "fitness": 98.87,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 6,
+        "tokens": 518
+      },
+      "contract": {
+        "purpose": "Audit an unfamiliar Python repository for security vulnerabilities.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.9494,
+          "cost_usd": 0.002466,
+          "fitness": 98.87
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.2,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.5,
+        "latency_score": 94.9,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Third-party HackerNews API: Results are returned in 'hits' list. Access 'title' (str), 'points' (int), 'author' (str), and 'url'. Parse via python_eval with json.loads.",
+        "Sorting by points requires integer conversion and null-safe default (item.get('points', 0)). Strip empty or deleted items.",
+        "Live API verification: Endpoint returned HTTP 200 with schema keys ['hits', 'nbHits']. Payload confirmed live Internet connection."
+      ],
+      "output_sample": "[GENERATION 1 - REFLECTED AGENT OUTPUT]\nGOAL: Audit an unfamiliar Python repository for security vulnerabilities.\nVALIDATED FINDINGS:\n[VALIDATED] SQL injection via string-formatted queries in db.py (Evidence: def get_user(conn, user_id):\n    query =...)\n[VALIDATED] Hardcoded AWS key AKIAIOSFODNN7EXAMPLE in config.py (Evidence: AWS_ACCESS_KEY_ID = \"AKIAIOSFODNN7EXAMPL...)\n[VALIDATED] DOM XSS via innerHTML and location.hash in routes.py (Evidence: def render_profile(name):\n    return f\"<...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Third-party HackerNews API: Results are returned in 'hits' list. Access 'title' (str), 'points' (int), 'author' (str), and 'url'. Parse via python_eval with json.loads.\n  -> Sorting by points requires integer conversion and null-safe default (item.get('points', 0)). Strip empty or deleted items.",
+      "created_at": "2026-09-06T11:06:10.407054+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_4d3f1308",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.9494,
+    "cost_efficiency": 0.9753,
+    "latency_ms": 143.0,
+    "cost_usd": 0.002466,
+    "fitness": 98.87,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 6,
+    "tokens": 518
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T11:06:10.407054+00:00",
+  "updated_at": "2026-09-06T11:06:10.407096+00:00"
+}

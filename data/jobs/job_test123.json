@@ -1,0 +1,29 @@
+{
+  "job_id": "job_test123",
+  "goal": "Test goal",
+  "domain": "software_engineering",
+  "capabilities": [],
+  "tools": [],
+  "success_criteria": [
+    "correctness",
+    "evidence",
+    "reliability",
+    "completeness"
+  ],
+  "fitness_weights": {
+    "accuracy": 0.4,
+    "reliability": 0.3,
+    "speed": 0.15,
+    "cost_efficiency": 0.15
+  },
+  "status": "pending",
+  "run_id": null,
+  "champion_id": null,
+  "agent_id": null,
+  "generations": 4,
+  "population": 4,
+  "mode": "live",
+  "created_at": "2026-09-06T10:43:48.007687+00:00",
+  "updated_at": "2026-09-06T10:43:48.007687+00:00",
+  "error": null
+}

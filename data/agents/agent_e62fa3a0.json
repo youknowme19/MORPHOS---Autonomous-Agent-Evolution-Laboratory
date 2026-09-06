@@ -1,0 +1,176 @@
+{
+  "agent_id": "agent_e62fa3a0",
+  "name": "Cybersecurity Autonomous Agent",
+  "description": "Audit repository security for SQL injection vulnerabilities",
+  "domain": "cybersecurity",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S00-01",
+      "generation": 0,
+      "genome": {
+        "orchestration": "single",
+        "tools": [
+          "list_files"
+        ],
+        "memory": "none",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 1,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "generalist"
+        ]
+      },
+      "roles": [
+        "generalist"
+      ],
+      "tools": [
+        "list_files"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.0,
+        "reliability": 0.0,
+        "speed": 0.9688,
+        "cost_efficiency": 0.9876,
+        "latency_ms": 88.0,
+        "cost_usd": 0.001236,
+        "fitness": 29.35,
+        "false_positive_rate": 1.0,
+        "coverage": 0.0,
+        "tool_calls": 1,
+        "tokens": 268
+      },
+      "contract": {
+        "purpose": "Audit repository security for SQL injection vulnerabilities",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.0,
+          "reliability": 0.0,
+          "speed": 0.9688,
+          "cost_usd": 0.001236,
+          "fitness": 29.35
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 34.3,
+        "correctness": 0.0,
+        "reliability": 0.0,
+        "evidence_grounding": 0.0,
+        "cost_efficiency": 98.8,
+        "latency_score": 96.9,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [],
+      "output_sample": "[GENERATION 0 - BASELINE EXPLORATION OUTPUT]\nGOAL: Audit repository security for SQL injection vulnerabilities\nINITIAL FINDINGS (Unfiltered):\n• [UNVERIFIED/SPECULATIVE] Authentication is insecure because a debug print exists.\nASSESSMENT: High exploratory noise. Lacks evidence validation and parameter pruning.",
+      "created_at": "2026-09-06T10:51:50.584267+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_e62fa3a0",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 0.0,
+    "reliability": 0.0,
+    "speed": 0.9688,
+    "cost_efficiency": 0.9876,
+    "latency_ms": 88.0,
+    "cost_usd": 0.001236,
+    "fitness": 29.35,
+    "false_positive_rate": 1.0,
+    "coverage": 0.0,
+    "tool_calls": 1,
+    "tokens": 268
+  },
+  "deployed": true,
+  "continuous_eval_history": [
+    {
+      "timestamp": 1788691942.499542,
+      "execution_id": "exec_79b42f88",
+      "version_str": "v1",
+      "quality_score": 1.0,
+      "grounded_claims": 0,
+      "unsupported_claims": 0,
+      "tool_failures": 0,
+      "duration_ms": 3531.9,
+      "regression_detected": false,
+      "notes": "Execution quality 1.00 within normal tolerance (threshold 0.50)."
+    },
+    {
+      "timestamp": 1788692375.649209,
+      "execution_id": "exec_5d827803",
+      "version_str": "v1",
+      "quality_score": 1.0,
+      "grounded_claims": 0,
+      "unsupported_claims": 0,
+      "tool_failures": 0,
+      "duration_ms": 3871.85,
+      "regression_detected": false,
+      "notes": "Execution quality 1.00 within normal tolerance (threshold 0.50)."
+    },
+    {
+      "timestamp": 1788692726.719351,
+      "execution_id": "exec_ec8e411a",
+      "version_str": "v1",
+      "quality_score": 1.0,
+      "grounded_claims": 0,
+      "unsupported_claims": 0,
+      "tool_failures": 0,
+      "duration_ms": 5098.81,
+      "regression_detected": false,
+      "notes": "Execution quality 1.00 within normal tolerance (threshold 0.50)."
+    },
+    {
+      "timestamp": 1788693247.120859,
+      "execution_id": "exec_13a03d68",
+      "version_str": "v1",
+      "quality_score": 1.0,
+      "grounded_claims": 0,
+      "unsupported_claims": 0,
+      "tool_failures": 0,
+      "duration_ms": 4868.28,
+      "regression_detected": false,
+      "notes": "Execution quality 1.00 within normal tolerance (threshold 0.50)."
+    }
+  ],
+  "created_at": "2026-09-06T10:51:50.584267+00:00",
+  "updated_at": "2026-09-06T11:14:07.120865+00:00"
+}

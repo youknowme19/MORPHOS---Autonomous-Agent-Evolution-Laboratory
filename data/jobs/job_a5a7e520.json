@@ -1,0 +1,32 @@
+{
+  "job_id": "job_a5a7e520",
+  "goal": "Extract trending AI stories from HackerNews API",
+  "domain": "cybersecurity",
+  "capabilities": [
+    "http",
+    "api_request",
+    "evidence_validation"
+  ],
+  "tools": [],
+  "success_criteria": [
+    "Evidence-grounded technical solution",
+    "Zero unverified hallucinations",
+    "Minimum 80% multi-objective fitness"
+  ],
+  "fitness_weights": {
+    "accuracy": 0.4,
+    "reliability": 0.3,
+    "speed": 0.15,
+    "cost_efficiency": 0.15
+  },
+  "status": "running",
+  "run_id": "run_d75dd374",
+  "champion_id": null,
+  "agent_id": null,
+  "generations": 2,
+  "population": 2,
+  "mode": "live",
+  "created_at": "2026-09-06T11:01:46.497595+00:00",
+  "updated_at": "2026-09-06T11:01:46.497705+00:00",
+  "error": null
+}

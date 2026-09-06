@@ -1,0 +1,33 @@
+{
+  "job_id": "job_f294b166",
+  "goal": "Build an agent to see next.js error in the github repo ",
+  "domain": "github_repo",
+  "capabilities": [
+    "code_search",
+    "filesystem",
+    "python",
+    "evidence_validation"
+  ],
+  "tools": [],
+  "success_criteria": [
+    "Evidence-grounded technical solution",
+    "Zero unverified hallucinations",
+    "Minimum 80% multi-objective fitness"
+  ],
+  "fitness_weights": {
+    "accuracy": 0.4,
+    "reliability": 0.3,
+    "speed": 0.15,
+    "cost_efficiency": 0.15
+  },
+  "status": "running",
+  "run_id": "run_d24350b4",
+  "champion_id": null,
+  "agent_id": null,
+  "generations": 3,
+  "population": 3,
+  "mode": "live",
+  "created_at": "2026-09-06T12:43:14.595649+00:00",
+  "updated_at": "2026-09-06T12:43:29.455773+00:00",
+  "error": null
+}

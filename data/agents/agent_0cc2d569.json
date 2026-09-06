@@ -1,0 +1,152 @@
+{
+  "agent_id": "agent_0cc2d569",
+  "name": "Github Repo Autonomous Agent",
+  "description": "Inspect unfamiliar GitHub repository https://github.com/pallets/flask, discover architecture tree, entry points, and security sensitive sinks.",
+  "domain": "github_repo",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S01-02",
+      "generation": 1,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 4,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "github_inspect",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.9167,
+        "reliability": 1.0,
+        "speed": 0.9476,
+        "cost_efficiency": 0.9756,
+        "latency_ms": 739.8,
+        "cost_usd": 0.002445,
+        "fitness": 95.52,
+        "false_positive_rate": 0.0,
+        "coverage": 0.9967,
+        "tool_calls": 3,
+        "tokens": 454
+      },
+      "contract": {
+        "purpose": "Inspect unfamiliar GitHub repository https://github.com/pallets/flask, discover architecture tree, entry points, and security sensitive sinks.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "github_inspect",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.9167,
+          "reliability": 1.0,
+          "speed": 0.9476,
+          "cost_usd": 0.002445,
+          "fitness": 95.52
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 97.1,
+        "correctness": 91.7,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 94.8,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "Repository httpx: 1 sensitive sink boundary(ies) identified (config.py). Validate credentials and sinks via evidence_check to eliminate false positives.",
+        "Repository flask (Python): Main entry point isolated at 'src/flask/__main__.py'. Inspect syntax trees from this root before reading leaf modules.",
+        "Repository flask: 3 sensitive sink boundary(ies) identified (.editorconfig, .pre-commit-config.yaml, src/flask/config.py). Validate credentials and sinks via evidence_check to eliminate false positives."
+      ],
+      "output_sample": "[GENERATION 1 - REFLECTED AGENT OUTPUT]\nGOAL: Inspect unfamiliar GitHub repository https://github.com/pallets/flask, discover architecture tree, entry points, and security sensitive sinks.\nVALIDATED FINDINGS:\n[VALIDATED] Mapped repository architecture and entry point: src/flask/__main__.py (Python). (Evidence: repo=https://github.com/pallets/flask br...)\n[VALIDATED] Identified language stack: Python. (Evidence: languages=['Python']...)\n[VALIDATED] Verified test coverage layout (2 test files detected). (Evidence: tests=['tests', 'src/flask/testing.py']...)\n[VALIDATED] Audited 2/3 security sensitive sink(s): .editorconfig, .pre-commit-config.yaml. (Evidence: Target: ['.editorconfig', '.pre-commit-c...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> Repository httpx: 1 sensitive sink boundary(ies) identified (config.py). Validate credentials and sinks via evidence_check to eliminate false positives.\n  -> Repository flask (Python): Main entry point isolated at 'src/flask/__main__.py'. Inspect syntax trees from this root before reading leaf modules.",
+      "created_at": "2026-09-06T12:26:50.240407+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_0cc2d569",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 0.9167,
+    "reliability": 1.0,
+    "speed": 0.9476,
+    "cost_efficiency": 0.9756,
+    "latency_ms": 739.8,
+    "cost_usd": 0.002445,
+    "fitness": 95.52,
+    "false_positive_rate": 0.0,
+    "coverage": 0.9967,
+    "tool_calls": 3,
+    "tokens": 454
+  },
+  "deployed": true,
+  "continuous_eval_history": [
+    {
+      "timestamp": 1788697614.560214,
+      "execution_id": "exec_ee1efbcf",
+      "version_str": "v1",
+      "quality_score": 1.0,
+      "grounded_claims": 4,
+      "unsupported_claims": 0,
+      "tool_failures": 0,
+      "duration_ms": 4293.87,
+      "regression_detected": false,
+      "notes": "Execution quality 1.00 within normal tolerance (threshold 0.72)."
+    }
+  ],
+  "created_at": "2026-09-06T12:26:50.240407+00:00",
+  "updated_at": "2026-09-06T12:26:54.560231+00:00"
+}

@@ -1,0 +1,138 @@
+{
+  "agent_id": "agent_68f1bb9c",
+  "name": "Data Analysis Autonomous Agent",
+  "description": "Analyze a CSV dataset and identify important anomalies and trends.",
+  "domain": "data_analysis",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S01-03",
+      "generation": 1,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "list_files",
+          "csv_stats",
+          "grep"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "none"
+        ],
+        "search_budget": 5,
+        "prompt_traits": [
+          "brief"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "list_files",
+        "csv_stats",
+        "grep"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.9938,
+        "cost_efficiency": 0.9758,
+        "latency_ms": 88.0,
+        "cost_usd": 0.002417,
+        "fitness": 99.54,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 2,
+        "tokens": 366
+      },
+      "contract": {
+        "purpose": "Analyze a CSV dataset and identify important anomalies and trends.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "list_files",
+          "csv_stats",
+          "grep"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.9938,
+          "cost_usd": 0.002417,
+          "fitness": 99.54
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.2,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 99.4,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [
+        "The revenue column on 2026-08-05 contains an extreme outlier (98,000 vs baseline ~1,200). Use statistical dispersion before concluding general growth.",
+        "Refunds data on 2026-08-06 has missing values (None), followed by a 90 refund surge on 2026-08-08. Flag both data quality gaps and refund anomalies together."
+      ],
+      "output_sample": "[GENERATION 1 - REFLECTED AGENT OUTPUT]\nGOAL: Analyze a CSV dataset and identify important anomalies and trends.\nVALIDATED FINDINGS:\n[VALIDATED] Revenue spike of 98000 on 2026-08-05 is an outlier versus ~1200 baseline. (Evidence: n=8 mean=13152.5 std=32071.6 max=98000 m...)\n[VALIDATED] Refunds are missing on 2026-08-06. (Evidence: refunds=None on 2026-08-06...)\n[VALIDATED] Refunds spike to 90 while revenue collapses to 40 on 2026-08-08. (Evidence: revenue=40 refunds=90...)\nCONTEXTUAL RULES APPLIED FROM MEMORY:\n  -> The revenue column on 2026-08-05 contains an extreme outlier (98,000 vs baseline ~1,200). Use statistical dispersion before concluding general growth.\n  -> Refunds data on 2026-08-06 has missing values (None), followed by a 90 refund surge on 2026-08-08. Flag both data quality gaps and refund anomalies together.",
+      "created_at": "2026-09-06T12:08:02.598831+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_68f1bb9c",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.9938,
+    "cost_efficiency": 0.9758,
+    "latency_ms": 88.0,
+    "cost_usd": 0.002417,
+    "fitness": 99.54,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 2,
+    "tokens": 366
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T12:08:02.598831+00:00",
+  "updated_at": "2026-09-06T12:08:02.598863+00:00"
+}

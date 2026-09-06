@@ -1,0 +1,338 @@
+{
+  "agent_id": "agent_f83d0363",
+  "name": "Data Anomaly Agent",
+  "description": "Analyze CSV dataset for revenue anomalies.",
+  "domain": "data_analysis",
+  "current_version": "v1",
+  "versions": [
+    {
+      "version": "v1",
+      "specimen_id": "S00-02",
+      "generation": 0,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "csv_stats",
+          "calculator"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "output"
+        ],
+        "search_budget": 3,
+        "prompt_traits": [
+          "structured_output"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "csv_stats",
+        "calculator"
+      ],
+      "parent_version": null,
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 1.0,
+        "reliability": 1.0,
+        "speed": 0.991,
+        "cost_efficiency": 0.9756,
+        "latency_ms": 127.0,
+        "cost_usd": 0.002442,
+        "fitness": 99.5,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 3,
+        "tokens": 444
+      },
+      "contract": {
+        "purpose": "Analyze CSV dataset for revenue anomalies.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "csv_stats",
+          "calculator"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 1.0,
+          "reliability": 1.0,
+          "speed": 0.991,
+          "cost_usd": 0.002442,
+          "fitness": 99.5
+        },
+        "version": "v1"
+      },
+      "readiness": {
+        "score": 99.2,
+        "correctness": 100.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 99.1,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [],
+      "output_sample": "[GENERATION 0 - BASELINE EXPLORATION OUTPUT]\nGOAL: Analyze CSV dataset for revenue anomalies.\nINITIAL FINDINGS (Unfiltered):\n• [VERIFIED] Revenue spike of 98000 on 2026-08-05 is an outlier versus ~1200 baseline.\n• [VERIFIED] Refunds are missing on 2026-08-06.\n• [VERIFIED] Refunds spike to 90 while revenue collapses to 40 on 2026-08-08.\nSCRATCHPAD NOTES: planner:scratchpad:['Compute stats → find spikes/missing values → verify numerically.'] | executor:csv_stats:[] | executor:calculator:['mean(revenue)']\nASSESSMENT: High exploratory noise. Lacks evidence validation and parameter pruning.",
+      "created_at": "2026-09-06T13:04:46.602808+00:00"
+    },
+    {
+      "version": "v2",
+      "specimen_id": "S01-01",
+      "generation": 0,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "csv_stats",
+          "calculator"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "output"
+        ],
+        "search_budget": 3,
+        "prompt_traits": [
+          "structured_output"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "csv_stats",
+        "calculator"
+      ],
+      "parent_version": "v1",
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.95,
+        "reliability": 1.0,
+        "speed": 0.991,
+        "cost_efficiency": 0.9756,
+        "latency_ms": 127.0,
+        "cost_usd": 0.002442,
+        "fitness": 94.0,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 3,
+        "tokens": 444
+      },
+      "contract": {
+        "purpose": "Analyze CSV dataset for revenue anomalies.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "csv_stats",
+          "calculator"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.95,
+          "reliability": 1.0,
+          "speed": 0.991,
+          "cost_usd": 0.002442,
+          "fitness": 94.0
+        },
+        "version": "v2"
+      },
+      "readiness": {
+        "score": 97.9,
+        "correctness": 95.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 99.1,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [],
+      "output_sample": "[GENERATION 0 - BASELINE EXPLORATION OUTPUT]\nGOAL: Analyze CSV dataset for revenue anomalies.\nINITIAL FINDINGS (Unfiltered):\n• [VERIFIED] Revenue spike of 98000 on 2026-08-05 is an outlier versus ~1200 baseline.\n• [VERIFIED] Refunds are missing on 2026-08-06.\n• [VERIFIED] Refunds spike to 90 while revenue collapses to 40 on 2026-08-08.\nSCRATCHPAD NOTES: planner:scratchpad:['Compute stats → find spikes/missing values → verify numerically.'] | executor:csv_stats:[] | executor:calculator:['mean(revenue)']\nASSESSMENT: High exploratory noise. Lacks evidence validation and parameter pruning.",
+      "created_at": "2026-09-06T13:04:46.603718+00:00"
+    },
+    {
+      "version": "v3",
+      "specimen_id": "S02-01",
+      "generation": 0,
+      "genome": {
+        "orchestration": "planner_executor",
+        "tools": [
+          "csv_stats",
+          "calculator"
+        ],
+        "memory": "scratchpad",
+        "validators": [
+          "output"
+        ],
+        "search_budget": 3,
+        "prompt_traits": [
+          "structured_output"
+        ],
+        "roles": [
+          "planner",
+          "executor"
+        ]
+      },
+      "roles": [
+        "planner",
+        "executor"
+      ],
+      "tools": [
+        "csv_stats",
+        "calculator"
+      ],
+      "parent_version": "v2",
+      "mutation_applied": "evolutionary_selection",
+      "metrics": {
+        "accuracy": 0.99,
+        "reliability": 1.0,
+        "speed": 0.991,
+        "cost_efficiency": 0.9756,
+        "latency_ms": 127.0,
+        "cost_usd": 0.002442,
+        "fitness": 97.5,
+        "false_positive_rate": 0.0,
+        "coverage": 1.0,
+        "tool_calls": 3,
+        "tokens": 444
+      },
+      "contract": {
+        "purpose": "Analyze CSV dataset for revenue anomalies.",
+        "inputs": [
+          "user_task_string",
+          "optional_runtime_context_dict"
+        ],
+        "outputs": [
+          "validated_claims_array",
+          "synthesized_technical_solution",
+          "execution_metrics"
+        ],
+        "required_tools": [
+          "csv_stats",
+          "calculator"
+        ],
+        "success_criteria": [
+          "Multi-objective Pareto fitness evaluation"
+        ],
+        "guarantees": [
+          "Evidence-grounded citations for technical claims",
+          "Zero unverified hallucinations in critical sinks",
+          "Strict scoped tool access within workspace boundary"
+        ],
+        "known_limitations": [
+          "Third-party external services subject to rate-limiting and network latency",
+          "Python code executions capped to 15-second timeouts in sandbox"
+        ],
+        "security_policy": {
+          "filesystem": "READ_ONLY_SCOPED",
+          "network": "ALLOWLISTED",
+          "python": "SANDBOXED_RESTRICTED",
+          "secrets": "STRICTLY_BLOCKED"
+        },
+        "evaluation_summary": {
+          "accuracy": 0.99,
+          "reliability": 1.0,
+          "speed": 0.991,
+          "cost_usd": 0.002442,
+          "fitness": 97.5
+        },
+        "version": "v3"
+      },
+      "readiness": {
+        "score": 98.9,
+        "correctness": 99.0,
+        "reliability": 100.0,
+        "evidence_grounding": 100.0,
+        "cost_efficiency": 97.6,
+        "latency_score": 99.1,
+        "security": 100.0,
+        "reproducibility": 94.0,
+        "formula": "0.25*Correctness + 0.25*Reliability + 0.15*Evidence + 0.15*Security + 0.10*CostEfficiency + 0.10*Reproducibility"
+      },
+      "applied_memory": [],
+      "output_sample": "[GENERATION 0 - BASELINE EXPLORATION OUTPUT]\nGOAL: Analyze CSV dataset for revenue anomalies.\nINITIAL FINDINGS (Unfiltered):\n• [VERIFIED] Revenue spike of 98000 on 2026-08-05 is an outlier versus ~1200 baseline.\n• [VERIFIED] Refunds are missing on 2026-08-06.\n• [VERIFIED] Refunds spike to 90 while revenue collapses to 40 on 2026-08-08.\nSCRATCHPAD NOTES: planner:scratchpad:['Compute stats → find spikes/missing values → verify numerically.'] | executor:csv_stats:[] | executor:calculator:['mean(revenue)']\nASSESSMENT: High exploratory noise. Lacks evidence validation and parameter pruning.",
+      "created_at": "2026-09-06T13:04:46.604786+00:00"
+    }
+  ],
+  "status": "active",
+  "created_from_job": "run_f83d0363",
+  "parent_agent": null,
+  "performance_metrics": {
+    "accuracy": 1.0,
+    "reliability": 1.0,
+    "speed": 0.991,
+    "cost_efficiency": 0.9756,
+    "latency_ms": 127.0,
+    "cost_usd": 0.002442,
+    "fitness": 99.5,
+    "false_positive_rate": 0.0,
+    "coverage": 1.0,
+    "tool_calls": 3,
+    "tokens": 444
+  },
+  "deployed": true,
+  "continuous_eval_history": [],
+  "created_at": "2026-09-06T13:04:46.602808+00:00",
+  "updated_at": "2026-09-06T13:04:46.606787+00:00"
+}
