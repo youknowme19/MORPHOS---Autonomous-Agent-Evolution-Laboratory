@@ -1,0 +1,16 @@
+[
+  {
+    "id": "data_outlier_01",
+    "name": "Revenue Spike Outlier Identification",
+    "must_include": "98000",
+    "ground_truth_evidence": "revenue=98000",
+    "evaluation_method": "exact_match"
+  },
+  {
+    "id": "data_nulls_02",
+    "name": "Missing Null Value Counting",
+    "must_include": "missing",
+    "ground_truth_evidence": "missing_refunds=1",
+    "evaluation_method": "threshold_match"
+  }
+]
