@@ -24,3 +24,5 @@ htmlcov/
 .vercel/
 apps/web/.vercel/
 apps/web/.env*
+.vercel
+.env*

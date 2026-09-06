@@ -4,6 +4,8 @@
 
   <br />
 
+  [![Live on Vercel](https://img.shields.io/badge/Vercel-Live%20Platform-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://web-five-zeta-28.vercel.app)
+  [![YouTube Video Walkthrough](https://img.shields.io/badge/YouTube-Video%20Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/npSAGDwA8IQ)
   [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
   [![Next.js 15](https://img.shields.io/badge/Next.js-15.0+-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -18,6 +20,13 @@
   </p>
 
   <p align="center">
+    <a href="https://web-five-zeta-28.vercel.app"><strong>🌐 Live Web Laboratory (Vercel)</strong></a> •
+    <a href="https://youtu.be/npSAGDwA8IQ"><strong>▶️ Video Tutorial & Walkthrough</strong></a> •
+    <a href="https://github.com/youknowme19/MORPHOS---Autonomous-Agent-Evolution-Laboratory"><strong>⭐ Star on GitHub</strong></a>
+  </p>
+
+  <p align="center">
+    <a href="#-video-walkthrough--tutorial">Video Demo</a> •
     <a href="#-executive-summary">Executive Summary</a> •
     <a href="#-why-morphos-the-evolutionary-paradigm">The Paradigm</a> •
     <a href="#-system-architecture--subsystems">Architecture</a> •
@@ -35,8 +44,25 @@
 
 ---
 
+## 🎬 Video Walkthrough & Tutorial
+
+Watch the complete video walkthrough explaining how MORPHOS works, its autonomous evolution loop, live multi-agent DAGs, and how to operate the laboratory:
+
+<div align="center">
+  <a href="https://youtu.be/npSAGDwA8IQ">
+    <img src="https://img.youtube.com/vi/npSAGDwA8IQ/maxresdefault.jpg" alt="Watch MORPHOS Video Walkthrough" width="90%" style="border-radius: 12px; border: 1px solid #1E293B; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+  </a>
+  <br /><br />
+  <p>
+    <strong><a href="https://youtu.be/npSAGDwA8IQ">▶️ Click Here to Watch on YouTube: How to Use MORPHOS (https://youtu.be/npSAGDwA8IQ)</a></strong>
+  </p>
+</div>
+
+---
+
 ## 📑 Table of Contents
 
+- [Video Walkthrough & Tutorial](#-video-walkthrough--tutorial)
 - [Executive Summary](#-executive-summary)
 - [Why MORPHOS? The Evolutionary Paradigm](#-why-morphos-the-evolutionary-paradigm)
   - [The Manual Prompt-Engineering Crisis](#the-manual-prompt-engineering-crisis)
@@ -70,6 +96,7 @@
   - [Daemon-Free Standalone Python Export](#5-daemon-free-standalone-python-export)
 - [Web Laboratory Interface](#-web-laboratory-interface)
 - [Quick Start](#-quick-start)
+  - [Live Cloud Deployment (Vercel)](#live-cloud-deployment-vercel)
   - [Prerequisites](#prerequisites)
   - [One-Command Launcher](#one-command-launcher)
   - [Manual Service Startup](#manual-service-startup)
@@ -515,6 +542,12 @@ The Next.js 15 web platform (`apps/web`) provides a futuristic operating system 
 
 ## ⚡ Quick Start
 
+### Live Cloud Deployment (Vercel)
+Test and interact with the production MORPHOS laboratory right now with zero local setup:
+* 🌐 **Live Web Laboratory**: [https://web-five-zeta-28.vercel.app](https://web-five-zeta-28.vercel.app)
+* 🏢 **Agent Registry**: [https://web-five-zeta-28.vercel.app/agents](https://web-five-zeta-28.vercel.app/agents)
+* 🎬 **Video Tutorial**: [https://youtu.be/npSAGDwA8IQ](https://youtu.be/npSAGDwA8IQ)
+
 ### Prerequisites
 * **Python**: `3.11` or higher
 * **Node.js**: `18.18+` or `20.x`
@@ -670,6 +703,7 @@ MORPHOS/
 ├── .env.example                 # Environment configuration template
 ├── pyproject.toml               # Python project configuration & pytest settings
 ├── README.md                    # System documentation & architectural reference
+├── vercel.json                  # Vercel deployment configuration
 ├── assets/                      # Vector assets & architectural diagrams
 │   ├── morphos-banner.svg       # Master hero banner
 │   ├── architecture-diagram.svg # Vector architecture diagram
@@ -679,8 +713,11 @@ MORPHOS/
 │   │   └── main.py              # REST API & Server-Sent Events (SSE) server
 │   └── web/                     # Next.js 15 frontend web laboratory
 │       ├── app/                 # Next.js App Router (/lab, /agents, /champion, etc.)
+│       │   └── api/             # Native Next.js edge API routes
 │       ├── components/          # React components (DAG graph, trace viewer, 3D field)
-│       └── lib/api.ts           # API client & SSE consumer
+│       ├── lib/api.ts           # API client & SSE consumer
+│       ├── next.config.mjs      # Next.js configuration
+│       └── package.json         # Frontend dependencies
 ├── benchmarks/                  # Ground-truth evaluation suites across 6 domains
 │   ├── cybersecurity/           # SQL injection, auth sinks, secret scanning
 │   ├── data_analysis/           # Tabular anomalies, statistical dispersion
@@ -709,6 +746,10 @@ MORPHOS/
 │       ├── storage.py           # Persistence for jobs, agents, versions, memory
 │       ├── tools_registry.py   # Definitions for 13 built-in permissioned tools
 │       └── worlds.py            # Ground-truth benchmark world definitions
+├── data/                        # Persistent platform storage
+│   ├── agents/                  # Versioned agent records & contracts
+│   ├── jobs/                    # Queued engineering job states
+│   └── memory/                  # Epistemic cross-run memory bank
 ├── docs/                        # Audit matrices & scientific validation reports
 │   ├── FINAL_VERIFICATION_REPORT.md # Verification summary across all 30 audit points
 │   ├── JUDGE_PROOF_EVIDENCE.md      # Specimen genomes, mutation deltas & proofs
@@ -738,6 +779,7 @@ MORPHOS/
 - [x] Enterprise Agent Registry with contracts, lineage, and 1-click rollback
 - [x] Standalone daemon-free Python champion export
 - [x] Next.js 15 laboratory interface with live SVG DAG and 3D organism
+- [x] Vercel cloud deployment with native Next.js API endpoints
 - [ ] Distributed specimen evaluation across Kubernetes clusters
 - [ ] Evolutionary crossover (recombination of complementary genomes)
 - [ ] Integration with Hugging Face and Ollama for local open-weight inference
