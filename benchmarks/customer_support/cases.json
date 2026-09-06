@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sup_refund_01",
+    "name": "Refund Policy Intent Classification",
+    "must_include": "billing_refund",
+    "ground_truth_evidence": "policy:refund",
+    "evaluation_method": "intent_match"
+  },
+  {
+    "id": "sup_auth_02",
+    "name": "Authentication Security Incident Classification",
+    "must_include": "auth_incident",
+    "ground_truth_evidence": "policy:security",
+    "evaluation_method": "intent_match"
+  }
+]
