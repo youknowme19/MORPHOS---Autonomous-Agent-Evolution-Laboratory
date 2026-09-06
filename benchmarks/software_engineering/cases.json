@@ -1,0 +1,23 @@
+[
+  {
+    "id": "se_tree_01",
+    "name": "Repository Tree Architecture Discovery",
+    "must_include": "architecture",
+    "ground_truth_evidence": "root_directories_and_files",
+    "evaluation_method": "structure_match"
+  },
+  {
+    "id": "se_entry_02",
+    "name": "CLI and Application Entry Point Identification",
+    "must_include": "entry",
+    "ground_truth_evidence": "main_or_cli_file",
+    "evaluation_method": "path_match"
+  },
+  {
+    "id": "se_tests_03",
+    "name": "Test Suite Layout & Coverage Verification",
+    "must_include": "coverage",
+    "ground_truth_evidence": "test_directory_layout",
+    "evaluation_method": "coverage_check"
+  }
+]
