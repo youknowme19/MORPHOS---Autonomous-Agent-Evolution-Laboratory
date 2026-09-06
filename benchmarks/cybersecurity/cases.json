@@ -1,0 +1,29 @@
+[
+  {
+    "id": "sec_sqli_01",
+    "name": "SQL Injection Query Construction Detection",
+    "target_file": "db.py",
+    "expected_vulnerability": "sql_injection",
+    "must_include": "db.py",
+    "ground_truth_evidence": "execute('%s' % name)",
+    "severity": "CRITICAL"
+  },
+  {
+    "id": "sec_secret_02",
+    "name": "Hardcoded Cloud Secret Leak Detection",
+    "target_file": "config.py",
+    "expected_vulnerability": "secret_leak",
+    "must_include": "config.py",
+    "ground_truth_evidence": "AKIAIOSFODNN7EXAMPLE",
+    "severity": "HIGH"
+  },
+  {
+    "id": "sec_xss_03",
+    "name": "DOM-Based Cross-Site Scripting Sink Detection",
+    "target_file": "routes.py",
+    "expected_vulnerability": "dom_xss",
+    "must_include": "routes.py",
+    "ground_truth_evidence": "innerHTML = window.location.hash",
+    "severity": "MEDIUM"
+  }
+]
