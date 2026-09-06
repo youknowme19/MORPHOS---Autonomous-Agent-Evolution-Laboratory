@@ -57,7 +57,7 @@ export function OutputEvolutionViewer({ specimens = [], className = "" }: Output
               OUTPUT EVOLUTION & QUALITY PROGRESSION
             </span>
           </div>
-          <h2 className="mt-1 font-serif text-2xl text-white">Visualizing Output Maturation</h2>
+          <h2 className="mt-1 text-xl font-bold tracking-tight text-white">Visualizing Output Maturation</h2>
           <p className="mt-1 text-xs text-white/50">
             Compare how agent outputs transform from raw, speculative claims into crisp, evidence-backed synthesis.
           </p>

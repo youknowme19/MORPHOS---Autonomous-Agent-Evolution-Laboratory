@@ -9,9 +9,8 @@ module.exports = {
         line: "rgba(255,255,255,0.08)",
       },
       fontFamily: {
-        sans: ["var(--font-geist)", "ui-sans-serif", "system-ui"],
-        serif: ["var(--font-instrument)", "ui-serif", "Georgia"],
-        mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular"],
+        sans: ["var(--font-sans)", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        mono: ["var(--font-mono)", "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
     },
   },

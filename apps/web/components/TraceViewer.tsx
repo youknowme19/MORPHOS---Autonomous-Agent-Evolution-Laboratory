@@ -21,7 +21,7 @@ export function TraceViewer({ specimen, onClose }: TraceViewerProps) {
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
           <div>
             <div className="flex items-center gap-3">
-              <span className="font-serif text-xl text-white">{specimen.id} Trace</span>
+              <span className="font-mono text-lg font-bold tracking-tight text-white">{specimen.id} Trace</span>
               <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-0.5 text-[10px] tracking-wider text-cyan-200 font-mono">
                 GEN {String(specimen.generation).padStart(2, "0")}
               </span>

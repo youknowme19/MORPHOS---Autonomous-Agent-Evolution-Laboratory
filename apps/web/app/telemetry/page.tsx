@@ -68,7 +68,7 @@ export default function TelemetryPage() {
         <span className="font-mono text-xs tracking-[0.24em] text-cyan-300 uppercase">
           ENGINEERING TELEMETRY & OBSERVABILITY
         </span>
-        <h1 className="mt-2 font-serif text-4xl text-white">Execution Metrics</h1>
+        <h1 className="mt-2 text-2xl md:text-3xl font-bold tracking-tight text-white">Execution Metrics</h1>
         <p className="mt-2 text-sm text-white/50">
           Measured from actual specimen execution traces — zero simulated or fabricated metrics.{" "}
           <span className="text-white/30">{allSpecimens.length} traces across all runs.</span>
@@ -89,7 +89,7 @@ export default function TelemetryPage() {
         ].map(([label, value, sub]) => (
           <div key={String(label)} className="rounded-3xl border border-white/10 bg-black/40 p-5 backdrop-blur-md">
             <p className="text-[10px] font-mono tracking-[0.2em] text-white/40">{label}</p>
-            <p className="mt-2 font-serif text-3xl text-white font-normal">{value}</p>
+            <p className="mt-2 font-mono text-2xl font-bold tracking-tight text-white tabular-nums">{value}</p>
             <p className="mt-1 text-[10px] text-white/40 truncate">{sub}</p>
           </div>
         ))}
@@ -99,7 +99,7 @@ export default function TelemetryPage() {
       <div className="rounded-3xl border border-white/10 bg-black/40 p-6 backdrop-blur-md">
         <div className="flex items-center justify-between border-b border-white/5 pb-4">
           <div>
-            <h2 className="font-serif text-xl text-white">Tool Invocation Distribution</h2>
+            <h2 className="text-lg font-bold tracking-tight text-white">Tool Invocation Distribution</h2>
             <p className="text-xs text-white/50">Detailed count of tool actions dispatched during evolution</p>
           </div>
           <span className="font-mono text-xs text-cyan-300 font-semibold">{totalToolCalls} TOTAL CALLS</span>
@@ -138,7 +138,7 @@ export default function TelemetryPage() {
       <div className="rounded-3xl border border-white/10 bg-black/40 p-6 backdrop-blur-md">
         <div className="flex items-center justify-between border-b border-white/5 pb-4">
           <div>
-            <h2 className="font-serif text-xl text-white">Specimen Trace Audit Log</h2>
+            <h2 className="text-lg font-bold tracking-tight text-white">Specimen Trace Audit Log</h2>
             <p className="text-xs text-white/50">Click any execution trace to inspect tool calls and claims</p>
           </div>
           <span className="text-xs text-white/40 font-mono">{allSpecimens.length} TRACES</span>

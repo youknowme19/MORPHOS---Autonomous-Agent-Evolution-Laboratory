@@ -29,10 +29,15 @@ export function Shell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen bg-[#07080d] text-white">
       <header className="sticky top-0 z-30 flex items-center justify-between border-b border-white/10 bg-black/60 px-6 py-4 backdrop-blur-xl">
         <Link href="/" className="flex items-center gap-3">
-          <span className="font-serif text-2xl tracking-[0.28em] font-semibold text-white">
-            MORPHOS
-          </span>
-          <span className="hidden sm:inline-block rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[9px] tracking-widest text-cyan-300">
+          <div className="flex items-center gap-2">
+            <div className="h-6 w-6 rounded-md bg-gradient-to-br from-cyan-400 via-indigo-500 to-purple-600 flex items-center justify-center shadow-[0_0_12px_rgba(34,211,238,0.4)]">
+              <span className="font-mono text-xs font-black text-black">M</span>
+            </div>
+            <span className="font-sans text-lg font-bold tracking-tight text-white">
+              MORPHOS
+            </span>
+          </div>
+          <span className="hidden sm:inline-block rounded-md border border-cyan-500/20 bg-cyan-500/10 px-2 py-0.5 font-mono text-[10px] font-semibold tracking-wider text-cyan-300">
             v0.2.0 LAB
           </span>
         </Link>

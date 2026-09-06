@@ -119,10 +119,10 @@ export default function HomePage() {
 
       {/* Hero Headline */}
       <div className="text-center">
-        <h1 className="font-serif text-5xl leading-tight md:text-7xl font-normal">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white">
           Don&apos;t build an agent.
           <br />
-          <span className="bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan-300 via-teal-200 to-indigo-400 bg-clip-text text-transparent">
             Evolve one.
           </span>
         </h1>

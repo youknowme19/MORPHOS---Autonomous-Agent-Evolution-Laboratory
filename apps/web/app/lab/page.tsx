@@ -110,7 +110,7 @@ function LabInner() {
               EVOLUTION LABORATORY · PHASE: {phase}
             </span>
           </div>
-          <h1 className="mt-2 font-serif text-3xl md:text-4xl text-white">
+          <h1 className="mt-2 text-2xl md:text-3xl font-bold tracking-tight text-white">
             {run?.task.domain?.toUpperCase() ?? "AGENT"} EXPERIMENT THEATER
           </h1>
           <p className="mt-1 text-xs text-white/50 max-w-3xl truncate">{goal}</p>
@@ -255,7 +255,7 @@ function LabInner() {
         <section className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="font-serif text-2xl text-white">Specimen Population</h2>
+              <h2 className="text-xl font-bold tracking-tight text-white">Specimen Population</h2>
               <p className="text-xs text-white/50">
                 Generation {run?.generation ?? 0} · {live.length} candidates evaluated
               </p>
@@ -295,7 +295,7 @@ function LabInner() {
                   </div>
 
                   <div className="mt-3 flex items-baseline justify-between">
-                    <span className="font-serif text-3xl text-white font-normal">
+                    <span className="font-mono text-2xl md:text-3xl font-bold tracking-tight text-white tabular-nums">
                       {specimen.metrics.fitness.toFixed(1)}
                     </span>
                     <span className="text-[10px] tracking-wider text-white/40 font-mono">FITNESS SCORE</span>
@@ -437,7 +437,7 @@ function LabInner() {
                 </span>
                 <span className="text-xs text-yellow-300 font-mono">GEN {best.generation}</span>
               </div>
-              <p className="mt-2 font-serif text-3xl text-white">{best.metrics.fitness.toFixed(1)}</p>
+              <p className="mt-2 font-mono text-3xl font-bold tracking-tight text-white tabular-nums">{best.metrics.fitness.toFixed(1)}</p>
               <p className="mt-1 text-xs text-white/60 truncate">{best.genome.roles.join(" → ")}</p>
               <div className="mt-3 flex items-center justify-between border-t border-yellow-300/10 pt-2 text-[11px] text-white/50 font-mono">
                 <span>Accuracy: {(best.metrics.accuracy * 100).toFixed(1)}%</span>

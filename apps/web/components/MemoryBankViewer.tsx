@@ -48,7 +48,7 @@ export function MemoryBankViewer({
               EPISTEMIC MEMORY BANK & REFLECTION ENGINE
             </span>
           </div>
-          <h2 className="mt-1 font-serif text-2xl text-white">Cross-Generational Learning</h2>
+          <h2 className="mt-1 text-xl font-bold tracking-tight text-white">Cross-Generational Learning</h2>
           <p className="mt-1 text-xs text-white/50">
             Agents analyze data from tools & third-party APIs, store contextual logic, and apply it in later runs.
           </p>

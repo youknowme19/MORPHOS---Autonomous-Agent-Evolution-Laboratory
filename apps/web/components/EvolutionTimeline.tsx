@@ -137,7 +137,7 @@ export function EvolutionTimeline({ specimens, className = "", onSelectSpecimen 
         <div>
           <p className="text-[11px] tracking-[0.2em] text-white/40">EVOLUTION TIMELINE</p>
           <div className="mt-1 flex items-baseline gap-2">
-            <span className="font-serif text-2xl text-white">
+            <span className="font-mono text-2xl font-bold tracking-tight text-white tabular-nums">
               {generationData.length > 0
                 ? cfg.format(generationData[generationData.length - 1].value)
                 : "—"}
@@ -259,7 +259,7 @@ export function EvolutionTimeline({ specimens, className = "", onSelectSpecimen 
               <span>GEN {d.generation}</span>
               <span className="font-mono text-cyan-300">{d.best?.id}</span>
             </div>
-            <div className="mt-1 font-serif text-lg text-white">
+            <div className="mt-1 font-mono text-base font-bold tracking-tight text-white tabular-nums">
               {cfg.format(d.value)}
             </div>
             <div className="truncate text-[10px] text-white/50">

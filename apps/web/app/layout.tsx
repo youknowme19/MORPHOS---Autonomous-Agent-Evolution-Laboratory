@@ -1,25 +1,29 @@
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { LabProvider } from "@/components/LabProvider";
 import { Shell } from "@/components/Shell";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
-const instrument = Instrument_Serif({
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-instrument",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata = {
-  title: "MORPHOS — Evolve an agent",
-  description: "Autonomous agent evolution laboratory",
+  title: "MORPHOS — Autonomous Agent Evolution Laboratory",
+  description: "Closed-loop evolutionary agent compiler and optimization laboratory",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${geist.variable} ${geistMono.variable} ${instrument.variable} font-sans antialiased`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className={`${inter.className} font-sans antialiased bg-[#08090d] text-[#e4e4e7] selection:bg-cyan-500/20 selection:text-cyan-200`}>
         <LabProvider>
           <Shell>{children}</Shell>
         </LabProvider>

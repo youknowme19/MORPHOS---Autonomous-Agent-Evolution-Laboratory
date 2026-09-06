@@ -85,7 +85,7 @@ export function MutationWhatIfModal({ specimen, onClose }: MutationWhatIfModalPr
               </span>
               <span className="text-xs font-mono text-white/50">{specimen.id}</span>
             </div>
-            <h2 className="mt-1 font-serif text-xl text-white">Hypothetical Architecture Mutation</h2>
+            <h2 className="mt-1 text-lg font-bold tracking-tight text-white">Hypothetical Architecture Mutation</h2>
           </div>
           <button
             onClick={onClose}

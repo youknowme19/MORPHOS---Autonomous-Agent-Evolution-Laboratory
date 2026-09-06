@@ -60,7 +60,7 @@ export default function ExperimentsPage() {
         <span className="font-mono text-xs tracking-[0.24em] text-cyan-300 uppercase">
           EXPERIMENT CATALOG & WORKFLOW
         </span>
-        <h1 className="mt-2 font-serif text-4xl text-white">Closed-Loop Evolution Trials</h1>
+        <h1 className="mt-2 text-2xl md:text-3xl font-bold tracking-tight text-white">Closed-Loop Evolution Trials</h1>
         <p className="mt-2 text-sm text-white/50">
           Every experiment evaluates a population of specimen architectures against ground-truth environments.
         </p>
@@ -121,7 +121,7 @@ export default function ExperimentsPage() {
             </Link>
           </div>
 
-          <h2 className="mt-4 font-serif text-2xl text-white">{run.task.goal}</h2>
+          <h2 className="mt-4 text-xl font-bold tracking-tight text-white">{run.task.goal}</h2>
 
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 text-xs font-mono">
             <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-3">
@@ -156,7 +156,7 @@ export default function ExperimentsPage() {
 
       {/* Benchmark Environments Showcase */}
       <div>
-        <h2 className="font-serif text-2xl text-white">Multi-Domain Benchmark Environments</h2>
+        <h2 className="text-xl font-bold tracking-tight text-white">Multi-Domain Benchmark Environments</h2>
         <p className="mt-1 text-xs text-white/50">
           Deterministic ground-truth environments ensuring reproducible evaluation and measurable generation gains.
         </p>
@@ -174,7 +174,7 @@ export default function ExperimentsPage() {
                   </span>
                   <span className="font-mono text-[10px] text-cyan-300">{card.domain}</span>
                 </div>
-                <h3 className="mt-3 font-serif text-lg text-white">{card.title}</h3>
+                <h3 className="mt-3 text-base font-semibold tracking-tight text-white">{card.title}</h3>
                 <p className="mt-2 text-xs text-white/60 leading-relaxed">{card.goal}</p>
 
                 <div className="mt-4 flex flex-wrap gap-1.5">

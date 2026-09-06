@@ -20,7 +20,7 @@ export default function ChampionPage() {
     return (
       <div className="mx-auto max-w-xl text-center py-24 space-y-4">
         <span className="rounded bg-white/10 px-3 py-1 font-mono text-xs text-white/60">[NO SPECIMEN]</span>
-        <h1 className="font-serif text-3xl text-white">No Champion Discovered Yet</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-white">No Champion Discovered Yet</h1>
         <p className="text-sm text-white/50">
           Run an evolution experiment from the laboratory to evolve and crown a champion agent architecture.
         </p>
@@ -77,7 +77,7 @@ export default function ChampionPage() {
         </span>
       </div>
 
-      <h1 className="mt-4 font-serif text-5xl md:text-7xl font-normal text-white">
+      <h1 className="mt-4 font-mono text-3xl md:text-5xl font-bold tracking-tight text-white">
         {champion.id}
       </h1>
       <p className="mt-2 text-xs font-mono text-white/50">
@@ -86,7 +86,7 @@ export default function ChampionPage() {
 
       {/* Hero Fitness Score */}
       <div className="mt-8">
-        <div className="font-serif text-7xl md:text-8xl font-normal text-transparent bg-clip-text bg-gradient-to-b from-yellow-100 via-amber-200 to-amber-400">
+        <div className="font-mono text-6xl md:text-8xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-yellow-100 via-amber-200 to-amber-400 tabular-nums">
           {champion.metrics.fitness.toFixed(1)}
         </div>
         <p className="mt-1 tracking-[0.25em] text-xs font-mono text-white/40 uppercase">
@@ -110,19 +110,19 @@ export default function ChampionPage() {
       <div className="mx-auto mt-8 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
         <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
           <p className="text-[10px] font-mono tracking-wider text-white/40">ACCURACY</p>
-          <p className="mt-1 font-serif text-2xl text-cyan-300">{(champion.metrics.accuracy * 100).toFixed(1)}%</p>
+          <p className="mt-1 font-mono text-2xl font-bold tracking-tight text-cyan-300 tabular-nums">{(champion.metrics.accuracy * 100).toFixed(1)}%</p>
         </div>
         <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
           <p className="text-[10px] font-mono tracking-wider text-white/40">RELIABILITY</p>
-          <p className="mt-1 font-serif text-2xl text-emerald-300">{(champion.metrics.reliability * 100).toFixed(1)}%</p>
+          <p className="mt-1 font-mono text-2xl font-bold tracking-tight text-emerald-300 tabular-nums">{(champion.metrics.reliability * 100).toFixed(1)}%</p>
         </div>
         <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
           <p className="text-[10px] font-mono tracking-wider text-white/40">SPEED</p>
-          <p className="mt-1 font-serif text-2xl text-amber-300">{(champion.metrics.speed * 100).toFixed(1)}%</p>
+          <p className="mt-1 font-mono text-2xl font-bold tracking-tight text-amber-300 tabular-nums">{(champion.metrics.speed * 100).toFixed(1)}%</p>
         </div>
         <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
           <p className="text-[10px] font-mono tracking-wider text-white/40">COST EFF.</p>
-          <p className="mt-1 font-serif text-2xl text-pink-300">{(champion.metrics.cost_efficiency * 100).toFixed(1)}%</p>
+          <p className="mt-1 font-mono text-2xl font-bold tracking-tight text-pink-300 tabular-nums">{(champion.metrics.cost_efficiency * 100).toFixed(1)}%</p>
         </div>
       </div>
 
@@ -172,7 +172,7 @@ export default function ChampionPage() {
           <div className="relative flex max-h-[90vh] w-full max-w-3xl flex-col rounded-3xl border border-yellow-300/30 bg-[#0d0c11] p-6 text-left shadow-2xl">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div>
-                <h3 className="font-serif text-xl text-yellow-100">Standalone Champion Code</h3>
+                <h3 className="font-sans text-lg font-bold tracking-tight text-yellow-100">Standalone Champion Code</h3>
                 <p className="text-xs text-white/50">{deployCode.filename} · Ready for standalone execution</p>
               </div>
               <button

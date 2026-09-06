@@ -37,7 +37,7 @@ export default function AOPage() {
           <span className="font-mono text-[9px] font-bold text-violet-300">[AO]</span>
           <span>AGENT ORCHESTRATOR (AO) ENGINEERING LOG</span>
         </div>
-        <h1 className="mt-3 font-serif text-4xl text-white">
+        <h1 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-white">
           AO Orchestrates MORPHOS. MORPHOS Evolves Agents.
         </h1>
         <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-2xl">
@@ -118,7 +118,7 @@ export default function AOPage() {
               <span className="text-[10px] font-mono text-white/35">SESSION #{idx + 1}</span>
             </div>
 
-            <h2 className="mt-3 font-serif text-lg text-white font-medium">{session.objective}</h2>
+            <h2 className="mt-3 text-base font-semibold tracking-tight text-white">{session.objective}</h2>
 
             <div className="mt-3 rounded-2xl border border-white/5 bg-white/[0.02] p-4 text-xs font-mono leading-relaxed text-emerald-200/90">
               <span className="font-bold text-white/40 tracking-wider">ENGINEERING OUTCOME: </span>

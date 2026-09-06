@@ -37,7 +37,7 @@ export default function SpecimensPage() {
           <span className="font-mono text-xs tracking-[0.24em] text-cyan-300 uppercase">
             SPECIMEN GENOME REPOSITORY
           </span>
-          <h1 className="mt-2 font-serif text-4xl text-white">Evolved Specimen Population</h1>
+          <h1 className="mt-2 text-2xl md:text-3xl font-bold tracking-tight text-white">Evolved Specimen Population</h1>
           <p className="mt-1 text-sm text-white/50">
             Every candidate evaluated across generations, showing prompt traits, tool sets, and mutation lineage.
           </p>
@@ -110,7 +110,7 @@ export default function SpecimensPage() {
                 </div>
 
                 <div className="mt-3 flex items-baseline justify-between">
-                  <span className="font-serif text-3xl text-white">{specimen.metrics.fitness.toFixed(1)}</span>
+                  <span className="font-mono text-2xl md:text-3xl font-bold tracking-tight text-white tabular-nums">{specimen.metrics.fitness.toFixed(1)}</span>
                   <span className="text-[10px] tracking-wider text-white/40 font-mono">FITNESS</span>
                 </div>
 
